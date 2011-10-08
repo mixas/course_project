@@ -1,4 +1,7 @@
 CourseProject::Application.routes.draw do
+  get "pages/home"
+  get "pages/about"
+
   resources :adaptive_tests
   get "adaptive_tests/new"
 

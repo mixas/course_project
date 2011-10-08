@@ -1,9 +1,7 @@
-class AdaptiveTestsController < ApplicationController
-  def new
-    @title = "new user"
-  end
-  
-  def show
-    @test = AdaptiveTest.find(params[:id])
+class AdaptiveTestsController < InheritedResources::Base#ApplicationController #
+respond_to :html, :xml  
+ 
+  def create
+    create! {adaptive_test_path}
   end
 end

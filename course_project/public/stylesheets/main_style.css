@@ -1,0 +1,32 @@
+/* 
+    Document   : main_style
+    Created on : 08.10.2011, 11:24:56
+    Author     : mihail
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+div, body, nav, header, section, h1 {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #f0f0f0;
+    width: 1000px;
+    border: 1px solid #555;
+    margin: 0px auto;
+}
+
+nav {
+    background-color: #fff
+}
