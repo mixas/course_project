@@ -1,10 +1,14 @@
 CourseProject::Application.routes.draw do
-  get "pages/home"
-  get "pages/about"
-
+ 
+    
+  match '/home', :to => 'pages#home'
+  match '/about', :to => 'pages#about'
+  
   resources :adaptive_tests
-  get "adaptive_tests/new"
-
+  resources :questions
+   
+  root :to => "pages#home"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

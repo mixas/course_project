@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  test_id: 1
+  complexity: 1.5
+
+two:
+  title: MyString
+  test_id: 1
+  complexity: 1.5
