@@ -1,8 +1,8 @@
 <div class="block">
   <div class="secondary-navigation">
     <ul class="wat-cf">
-      <li class="first active"><%= link_to "#{t("web-app-theme.list", :default => "List")}", questions_path  %></li>
-      <li><%= link_to "#{t("web-app-theme.new", :default => "New")}", new_question_path %></li>
+      <li class="first active"><%= link_to "#{t("web-app-theme.list", :default => "List")}", admin_questions_path  %></li>
+      <li><%= link_to "#{t("web-app-theme.new", :default => "New")}", new_admin_question_path %></li>
     </ul>
   </div>          
   <div class="content">          
@@ -12,7 +12,7 @@
         <tr>             
           <th class="first">ID</th>
                     <th>
-            <%= t("activerecord.attributes.question.title", :default => t("activerecord.labels.title", :default => "Title")) %>
+            <%= t("activerecord.attributes.admin_question.title", :default => t("activerecord.labels.title", :default => "Title")) %>
           </th>
                     <th><%= t("web-app-theme.created_at", :default => "Created at")  %></th>
           <th class="last">&nbsp;</th>
@@ -23,15 +23,15 @@
             <%= question.id %>
           </td>
                     <td>
-            <%= link_to question.title, question_path(question) %>
+            <%= link_to question.title, admin_question_path(question) %>
           </td>
                     <td>
             <%= question.created_at %>
           </td>
           <td class="last">
-            <%= link_to "#{t("web-app-theme.show", :default => "Show")}", question_path(question) %> |
-            <%= link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_question_path(question) %> |
-            <%= link_to "#{t("web-app-theme.delete", :default => "Delete")}", question_path(question), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+            <%= link_to "#{t("web-app-theme.show", :default => "Show")}", admin_question_path(question) %> |
+            <%= link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_admin_question_path(question) %> |
+            <%= link_to "#{t("web-app-theme.delete", :default => "Delete")}", admin_question_path(question), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
           </td>
         </tr>          
         <% end -%>

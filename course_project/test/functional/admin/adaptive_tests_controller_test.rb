@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class AdaptiveTestsControllerTest < ActionController::TestCase
+class Admin::AdaptiveTestsControllerTest < ActionController::TestCase
   # Replace this with your real tests.
   test "the truth" do
     assert true
