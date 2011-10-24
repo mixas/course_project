@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Web App application layout</title>
+  <title>Web App admin layout</title>
   <%= stylesheet_link_tag "web-app-theme/base", "web-app-theme/themes/default/style", "web-app-theme/override", :cache => true %>
   <%= javascript_include_tag :defaults, :cache => true %>
   <%= csrf_meta_tag %>
@@ -18,7 +18,9 @@
         </ul>
       </div>
       <div id="main-navigation">
-        <ul class="wat-cf"></ul>
+        <ul class="wat-cf"> <li class="<%= controller.controller_path == 'adaptive_tests' ? 'active' : '' %>"><a href="<%= admin_adaptive_tests_path %>">AdaptiveTests</a></li> 
+          <li class="<%= controller.controller_path == 'questions' ? 'active' : '' %>"><a href="<%= admin_questions_path %>">Questions</a></li> 
+          <li class="<%= controller.controller_path == 'students' ? 'active' : '' %>"><a href="<%= admin_students_path %>">Students</a></li></ul>
       </div>
     </div>    
     <div id="wrapper" class="wat-cf">

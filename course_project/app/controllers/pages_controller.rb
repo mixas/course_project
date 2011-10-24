@@ -1,10 +1,12 @@
 class PagesController < ApplicationController
+  layout = 'application'
+  
   def home
-    @title = "home"
+    @title = "Home page"
   end
 
   def about
-    @title = "about"
+    @title = "About"
   end
-  
+
 end

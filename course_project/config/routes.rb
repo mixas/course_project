@@ -1,20 +1,23 @@
 CourseProject::Application.routes.draw do
  
     
+  get "pages/home"
+
+  get "pages/about"
+
   match '/home', :to => 'pages#home'
   match '/about', :to => 'pages#about'
-  
- # resources :adaptive_tests
-  
-  resources :questions, :adaptive_tests
    
   root :to => "pages#home"
   
+  resources :adaptive_tests
+  
   namespace :admin do
-       # Directs /admin/products/* to Admin::ProductsController
-       # (app/controllers/admin/products_controller.rb)
-       resources :adaptive_tests, :questions
-     end
+    resources :adaptive_tests, :questions, :students, :groups
+    root :to => "home#index"
+  end
+  
+  #match '/admin', :to => 'admin/adaptive_tests'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
