@@ -20,7 +20,7 @@
       <div id="main-navigation">
         <ul class="wat-cf"> <li class="<%= controller.controller_path == 'adaptive_tests' ? 'active' : '' %>"><a href="<%= admin_adaptive_tests_path %>">AdaptiveTests</a></li> 
           <li class="<%= controller.controller_path == 'questions' ? 'active' : '' %>"><a href="<%= admin_questions_path %>">Questions</a></li> 
-          <li class="<%= controller.controller_path == 'students' ? 'active' : '' %>"><a href="<%= admin_students_path %>">Students</a></li></ul>
+          <li class="<%= controller.controller_path == 'admin/users' ? 'active' : '' %>"><a href="<%= admin_users_path %>">Users</a></li></ul>
       </div>
     </div>    
     <div id="wrapper" class="wat-cf">
@@ -41,6 +41,7 @@
       </div>
       <div id="sidebar">
         <%= yield :sidebar %>
+        
       </div>
     </div>    
   </div>

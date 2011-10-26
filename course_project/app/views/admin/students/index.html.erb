@@ -11,19 +11,29 @@
       <table class="table">
         <tr>             
           <th class="first">ID</th>
-                    <th>
+          <th>
             <%= t("activerecord.attributes.admin_student.name", :default => t("activerecord.labels.name", :default => "Name")) %>
           </th>
-                    <th><%= t("web-app-theme.created_at", :default => "Created at")  %></th>
-          <th class="last">&nbsp;</th>
+          <th>
+            <%= t("activerecord.attributes.admin_student.surname", :default => t("activerecord.labels.surname", :default => "Surname")) %>
+          </th>
+          <th>
+            <%= t("web-app-theme.created_at", :default => "Created at")  %>
+          </th>
+          <th class="last">
+            &nbsp;
+          </th>
         </tr>
         <% @students.each do |student| -%>
         <tr class="<%= cycle("odd", "even") %>">
           <td>
             <%= student.id %>
           </td>
-                    <td>
-            <%= link_to student.name, admin_student_path(student) %>
+          <td>
+            <%= student.name %>
+          </td>
+          <td>
+            <%= link_to student.surname, admin_student_path(student) %>
           </td>
                     <td>
             <%= student.created_at %>

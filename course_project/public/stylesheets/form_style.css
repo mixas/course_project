@@ -1,0 +1,67 @@
+/* 
+    Document   : form_style
+    Created on : 25.10.2011, 21:51:41
+    Author     : mihail
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+#form_title {
+    text-align: center;
+}
+
+#form{
+    padding: 10px;
+    padding-bottom: 20px;
+    width: 500px;
+    height: 400px;
+}
+
+.field {
+    font-size: 18px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.text_field {
+    border-radius: 7px;
+    float: right;
+}
+
+#new_user_submit {
+    margin-top: 20px;
+    text-align: center;
+    float: right;   
+    display: block;
+}
+
+#error_explanation { /*описание или толкование ошибок*/
+    margin: 20px;
+    border: 2px solid #A00;
+}
+
+#error_header {
+    background-color: #A00;
+    margin: 0px;
+    color: #FFF;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.error-list {
+    color: #A00;
+    list-style-position:inside;
+    list-style-type:square;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}

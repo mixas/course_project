@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111024100418) do
+ActiveRecord::Schema.define(:version => 20111025095231) do
 
   create_table "adaptive_tests", :force => true do |t|
     t.string   "title"
@@ -29,8 +29,19 @@ ActiveRecord::Schema.define(:version => 20111024100418) do
   create_table "students", :force => true do |t|
     t.string   "name"
     t.string   "surname"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "surname"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "encrypted_password"
+    t.string   "salt"
   end
 
 end

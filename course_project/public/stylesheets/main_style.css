@@ -21,12 +21,5 @@ div, body, nav, header, section, h1 {
 }
 
 body {
-    background-color: #f0f0f0;
-    width: 1000px;
-    border: 1px solid #555;
     margin: 0px auto;
-}
-
-nav {
-    background-color: #fff
 }

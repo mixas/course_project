@@ -1,0 +1,22 @@
+<div class="block">
+  <div id="form">
+    <h1 id="form_title">Sign in</h1>
+    <%= form_for(:session, :url => sessions_path) do |f| %>
+      
+      <div class="field">
+        <%= f.label :email, :class => "label" %>
+        <%= f.text_field :email, :class => "text_field" %>
+      </div>
+      <div class="field">
+        <%= f.label :password, :class => "label" %>
+        <%= f.password_field :password, :class => "text_field" %>
+      </div>
+      <div id="new_user_submit">
+        <%= f.submit "Sign in" %>
+      </div>
+    <% end %>
+
+    <p style="margin-left: 20px; font-size: 18px;">If you do not registrated then <%= link_to "sign up", signup_path %></p>
+  </div>
+  <% content_for :sidebar, render(:partial => 'sidebar') -%>
+</div>

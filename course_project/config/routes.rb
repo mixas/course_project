@@ -1,19 +1,19 @@
 CourseProject::Application.routes.draw do
  
-    
-  get "pages/home"
-
-  get "pages/about"
-
   match '/home', :to => 'pages#home'
   match '/about', :to => 'pages#about'
-   
+  
+  match '/signup', :to => 'users#new'
+  match '/signin', :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
+  
   root :to => "pages#home"
   
-  resources :adaptive_tests
+  resources :adaptive_tests, :users
+  resources :sessions, :only => [:new, :destroy, :create]
   
   namespace :admin do
-    resources :adaptive_tests, :questions, :students, :groups
+    resources :adaptive_tests, :questions, :users, :groups
     root :to => "home#index"
   end
   

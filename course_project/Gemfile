@@ -9,6 +9,8 @@ gem 'sqlite3'
 gem 'inherited_resources'
 gem 'has_scope'
 gem 'web-app-theme'
+gem 'devise'
+gem 'annotate'
 #gem 'devise'
 # Use unicorn as the web server
 # gem 'unicorn'

@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: questions
+#
+#  id               :integer         not null, primary key
+#  title            :string(255)
+#  complexity       :float
+#  created_at       :datetime
+#  updated_at       :datetime
+#  adaptive_test_id :integer
+#
+
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:

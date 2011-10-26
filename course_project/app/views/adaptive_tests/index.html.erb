@@ -1,12 +1,16 @@
 <div class="block">
+
+  <!--
   <div class="secondary-navigation">
     <ul class="wat-cf">
       <li class="first active"><%= link_to "#{t("web-app-theme.list", :default => "List")}", adaptive_tests_path  %></li>
       <li><%= link_to "#{t("web-app-theme.new", :default => "New")}", new_adaptive_test_path %></li>
     </ul>
-  </div>          
+  </div>
+  -->
+  
   <div class="content">          
-    <h2 class="title"><%= t("web-app-theme.all", :default => "All")  %> AdaptiveTests</h2>
+    <h2 class="title" align="center">All tests</h2>
     <div class="inner">
       <table class="table">
         <tr>             
@@ -26,12 +30,14 @@
             <%= link_to adaptive_test.title, adaptive_test_path(adaptive_test) %>
           </td>
                     <td>
-            <%= adaptive_test.created_at %>
+            <%= adaptive_test.created_at.year %>
           </td>
           <td class="last">
+            <!--
             <%= link_to "#{t("web-app-theme.show", :default => "Show")}", adaptive_test_path(adaptive_test) %> |
             <%= link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_adaptive_test_path(adaptive_test) %> |
             <%= link_to "#{t("web-app-theme.delete", :default => "Delete")}", adaptive_test_path(adaptive_test), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+            -->
           </td>
         </tr>          
         <% end -%>
