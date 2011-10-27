@@ -2,10 +2,10 @@
   <div id="form">
     <h1 id="form_title">Sign up</h1>
     <%= form_for(@user) do |f| %>
-    <%= render 'shared/error_messages', :object => f.object  %>
+    <%= render 'shared/error_messages', :object => f.object %>
     <div class="field">
       <%= f.label :name, :class => "label" %>
-      <%= f.text_field :name, :class => "text_field" %>
+      <%= f.text_field :name, :class => "text_field", :value => @user.name %>
     </div>
     <div class="field">
       <%= f.label :surname %>
@@ -30,4 +30,3 @@
   </div>
   <% content_for :sidebar, render(:partial => 'sidebar') -%>
 </div>
-
