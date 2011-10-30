@@ -15,11 +15,6 @@ root {
     display: block;
 }
 
-div, body, nav, header, section, h1 {
-    margin: 0px;
-    padding: 0px;
-}
-
-body {
-    margin: 0px auto;
+.block{
+    padding: 20px;
 }

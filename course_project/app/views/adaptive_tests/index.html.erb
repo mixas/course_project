@@ -33,11 +33,13 @@
             <%= adaptive_test.created_at.year %>
           </td>
           <td class="last">
-            <!--
+          
             <%= link_to "#{t("web-app-theme.show", :default => "Show")}", adaptive_test_path(adaptive_test) %> |
+   
             <%= link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_adaptive_test_path(adaptive_test) %> |
+       
             <%= link_to "#{t("web-app-theme.delete", :default => "Delete")}", adaptive_test_path(adaptive_test), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
-            -->
+            
           </td>
         </tr>          
         <% end -%>

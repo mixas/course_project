@@ -1,5 +1,7 @@
 CourseProject::Application.routes.draw do
  
+  resources :roles
+
   match '/home', :to => 'pages#home'
   match '/about', :to => 'pages#about'
   

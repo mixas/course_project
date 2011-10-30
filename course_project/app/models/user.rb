@@ -1,4 +1,13 @@
 class User < ActiveRecord::Base
+  
+  has_and_belongs_to_many :roles
+  
+  ROLES = %w[admin student]
+  
+  def role?(role)
+    return !!self.roles.find_by_name(role.to_s.camelize)
+  end
+  
   attr_accessor :password
   attr_accessible :name, :email, :password, :password_confirmation, :surname
   
